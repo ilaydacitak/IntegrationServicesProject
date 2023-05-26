@@ -1,0 +1,650 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/17/2023 1:43:50 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ILAYDCTK"
+  DTS:CreatorName="LOGOMERKEZ\Ilayda.Citak"
+  DTS:DTSID="{73913BC7-7CFB-46FF-8E37-AAF432A5B66F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5209.0"
+  DTS:LocaleID="1055"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="49"
+  DTS:VersionGUID="{BEA321DB-7FB4-4A31-9C38-80326B30AF30}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[C:\Users\ilayda.citak\source\repos\Integration Services Project\ConsoleApp]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{894DCEA5-C480-4CC3-B3A2-9E54C2703C9D}"
+      DTS:ObjectName="C:\Users\ilayda.citak\source\repos\Integration Services Project\ConsoleApp">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Users\ilayda.citak\source\repos\Integration Services Project\ConsoleApp\" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ConsoleApp.exe]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{53F58283-F525-481F-86F2-864A4D000025}"
+      DTS:ObjectName="ConsoleApp.exe">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\ilayda.citak\source\repos\Integration Services Project\ConsoleApp\bin\Debug\ConsoleApp.exe" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ConsoleApp.exe 1]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{1966A1E8-0ACB-4A56-83A4-9C9CB890D469}"
+      DTS:ObjectName="ConsoleApp.exe 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\ilayda.citak\source\repos\Integration Services Project\ConsoleApp\obj\Debug\ConsoleApp.exe" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ILAYDCTK.SQLTurkiye]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{174C61D6-70A7-4A7B-8A24-C3C79DA66C36}"
+      DTS:ObjectName="ILAYDCTK.SQLTurkiye">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ILAYDCTK;Initial Catalog=SQLTurkiye;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{174C61D6-70A7-4A7B-8A24-C3C79DA66C36}ILAYDCTK.SQLTurkiye;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.postgres.postgres]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{91432F14-8160-4762-8DB8-E9947837E9DB}"
+      DTS:ObjectName="localhost.postgres.postgres">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=localhost;uid=postgres;Dsn=PostgreSQL30;database=postgres;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAm6e/xVnblESm+FMGzmW9aAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB2w47j2O7Sx+OdBu0N6yv1AAAAAASAAACgAAAAEAAAAKm5cIDCvE8ZqbPUYQsqUl4QAAAAmMV3yeeFmvmNJUMKTeq+WhQAAADCHXcC/7ta+n5+ZfimP7lohUfC5w</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.postgres.postgres 1]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{1C638A61-B2AC-4C22-9BA3-ACE20B34F976}"
+      DTS:ObjectName="localhost.postgres.postgres 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=localhost;uid=postgres;Dsn=PostgreSQL30;database=postgres;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAm6e/xVnblESm+FMGzmW9aAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACkZcxZwl1T//293SLKwqjoAAAAAASAAACgAAAAEAAAALt9E0rjElYgIAktuF7C3OIQAAAAS8ilLYovYXJjglCi0pOKahQAAAB+sRPpu0rIryJD3BnNjxy1W71tcA</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.postgres.postgres1]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{8B21B586-FF93-46BC-8D24-39A32BD39E46}"
+      DTS:ObjectName="localhost.postgres.postgres1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=localhost;uid=postgres;Dsn=PostgreSQL30;database=postgres;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.sqltr.postgres]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{C304EB52-48F6-4645-985C-7B6C2AB0B7ED}"
+      DTS:ObjectName="localhost.sqltr.postgres">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="server=localhost;uid=postgres;Dsn=PostgreSQL35W;database=sqltr;port=5432;sslmode=disable;readonly=0;protocol=7.4;fakeoidindex=0;showoidcolumn=0;rowversioning=0;showsystemtables=0;fetch=100;unknownsizes=0;maxvarcharsize=255;maxlongvarcharsize=8190;debug=0;commlog=0;usedeclarefetch=0;textaslongvarchar=1;unknownsaslongvarchar=0;boolsaschar=1;parse=0;lfconversion=1;updatablecursors=1;trueisminus1=0;bi=0;byteaaslongvarbinary=1;useserversideprepare=1;lowercaseidentifier=0;d6=-101;optionalerrors=0;fetchrefcursors=0;xaopt=1;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAm6e/xVnblESm+FMGzmW9aAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAl2mAVeRwgmiFMDeJXWVTsAAAAAASAAACgAAAAEAAAAKXSb5Y5ocy8N6V8vuji3FcQAAAAhmTKQJCJzvbRZZKi8S+zKhQAAABJ77CHz/C4/YyGMH9l3eikOH5acA</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PostgreSQL30]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{B2746A0D-A48B-4058-91D1-028F9423856A}"
+      DTS:ObjectName="PostgreSQL30">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Dsn=PostgreSQL30;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PostgreSQL30 1]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{E2119486-2088-499E-B265-E918BF325BE4}"
+      DTS:ObjectName="PostgreSQL30 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Dsn=PostgreSQL30;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Program.cs]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{98F9F003-57B5-4BC7-B0BB-ADA52D683960}"
+      DTS:ObjectName="Program.cs">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\ilayda.citak\source\repos\Integration Services Project\ConsoleApp\Program.cs" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Program.cs 1]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{A0283A16-56BE-420A-A075-7BE2058AE9D6}"
+      DTS:ObjectName="Program.cs 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\ilayda.citak\source\repos\Integration Services Project\ConsoleApp\Program.cs" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQLTurkiye]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{13842F03-1F4F-4BD9-BBE9-335E15E5B3CD}"
+      DTS:ObjectName="SQLTurkiye">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Dsn=SQLTurkiye;description=SQLTurkiye;trusted_connection=Yes;app=Microsoft® Visual Studio®;wsid=ILAYDCTK;database=SQLTurkiye;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D4AB656A-2F53-4A9A-81BD-FE2DAA55C584}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">@[User::SqlScript]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{174C61D6-70A7-4A7B-8A24-C3C79DA66C36}"
+          SQLTask:SqlStmtSourceType="FileConnection"
+          SQLTask:SqlStatementSource="ConsoleApp.exe" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="NewParameterName"
+            SQLTask:DtsVariableName="System::SqlScript"
+            SQLTask:ParameterDirection="ReturnValue"
+            SQLTask:DataType="130"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL Server to PostgreSQL"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C61A982C-08B6-4D2D-B52A-BAF443C1ACD2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL Server to PostgreSQL"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\SQL Server to PostgreSQL\PostgreSQL"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="PostgreSQL"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"public"."personel"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1254</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SQL Server to PostgreSQL\PostgreSQL.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.sqltr.postgres]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.sqltr.postgres]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\SQL Server to PostgreSQL\PostgreSQL.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\SQL Server to PostgreSQL\PostgreSQL.Inputs[ODBC Destination Input].Columns[FNAME]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="FNAME"
+                      externalMetadataColumnId="Package\SQL Server to PostgreSQL\PostgreSQL.Inputs[ODBC Destination Input].ExternalColumns[fname]"
+                      lineageId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].Columns[FNAME]" />
+                    <inputColumn
+                      refId="Package\SQL Server to PostgreSQL\PostgreSQL.Inputs[ODBC Destination Input].Columns[SNAME]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="SNAME"
+                      externalMetadataColumnId="Package\SQL Server to PostgreSQL\PostgreSQL.Inputs[ODBC Destination Input].ExternalColumns[sname]"
+                      lineageId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].Columns[SNAME]" />
+                    <inputColumn
+                      refId="Package\SQL Server to PostgreSQL\PostgreSQL.Inputs[ODBC Destination Input].Columns[ID]"
+                      cachedDataType="i4"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\SQL Server to PostgreSQL\PostgreSQL.Inputs[ODBC Destination Input].ExternalColumns[inumber]"
+                      lineageId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].Columns[ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SQL Server to PostgreSQL\PostgreSQL.Inputs[ODBC Destination Input].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\SQL Server to PostgreSQL\PostgreSQL.Inputs[ODBC Destination Input].ExternalColumns[fname]"
+                      dataType="wstr"
+                      length="200"
+                      name="fname" />
+                    <externalMetadataColumn
+                      refId="Package\SQL Server to PostgreSQL\PostgreSQL.Inputs[ODBC Destination Input].ExternalColumns[sname]"
+                      dataType="wstr"
+                      length="200"
+                      name="sname" />
+                    <externalMetadataColumn
+                      refId="Package\SQL Server to PostgreSQL\PostgreSQL.Inputs[ODBC Destination Input].ExternalColumns[inumber]"
+                      dataType="wstr"
+                      length="11"
+                      name="inumber" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\SQL Server to PostgreSQL\PostgreSQL.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\SQL Server to PostgreSQL\PostgreSQL.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SQL Server to PostgreSQL\PostgreSQL.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SQL Server to PostgreSQL\PostgreSQL.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SQL Server to PostgreSQL\PostgreSQL.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SQL Server to PostgreSQL\PostgreSQL.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\SQL Server to PostgreSQL\SQL Server"
+              componentClassID="Microsoft.SSISODBCSrc"
+              contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Source"
+              name="SQL Server"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"dbo"."Personel_demo1"</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1254</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for fetching data."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The mode used to access the database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\SQL Server to PostgreSQL\SQL Server.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQLTurkiye]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQLTurkiye]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output]"
+                  errorRowDisposition="FailComponent"
+                  name="ODBC Source Output"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].Columns[ID]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].ExternalColumns[ID]"
+                      lineageId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].Columns[FNAME]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].ExternalColumns[FNAME]"
+                      length="150"
+                      lineageId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].Columns[FNAME]"
+                      name="FNAME" />
+                    <outputColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].Columns[SNAME]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].ExternalColumns[SNAME]"
+                      length="150"
+                      lineageId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].Columns[SNAME]"
+                      name="SNAME" />
+                    <outputColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].Columns[INUMBER]"
+                      codePage="1254"
+                      dataType="str"
+                      externalMetadataColumnId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].ExternalColumns[INUMBER]"
+                      length="11"
+                      lineageId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].Columns[INUMBER]"
+                      name="INUMBER" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].ExternalColumns[FNAME]"
+                      dataType="wstr"
+                      length="150"
+                      name="FNAME" />
+                    <externalMetadataColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].ExternalColumns[SNAME]"
+                      dataType="wstr"
+                      length="150"
+                      name="SNAME" />
+                    <externalMetadataColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].ExternalColumns[INUMBER]"
+                      codePage="1254"
+                      dataType="str"
+                      length="11"
+                      name="INUMBER" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Error Output].Columns[ID]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].ExternalColumns[ID]"
+                      lineageId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Error Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Error Output].Columns[FNAME]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].ExternalColumns[FNAME]"
+                      length="150"
+                      lineageId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Error Output].Columns[FNAME]"
+                      name="FNAME" />
+                    <outputColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Error Output].Columns[SNAME]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].ExternalColumns[SNAME]"
+                      length="150"
+                      lineageId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Error Output].Columns[SNAME]"
+                      name="SNAME" />
+                    <outputColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Error Output].Columns[INUMBER]"
+                      codePage="1254"
+                      dataType="str"
+                      externalMetadataColumnId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output].ExternalColumns[INUMBER]"
+                      length="11"
+                      lineageId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Error Output].Columns[INUMBER]"
+                      name="INUMBER" />
+                    <outputColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\SQL Server to PostgreSQL.Paths[ODBC Source Output]"
+              endId="Package\SQL Server to PostgreSQL\PostgreSQL.Inputs[ODBC Destination Input]"
+              name="ODBC Source Output"
+              startId="Package\SQL Server to PostgreSQL\SQL Server.Outputs[ODBC Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="431,85" />
+        <NodeLayout
+          Size="211,42"
+          Id="Package\SQL Server to PostgreSQL"
+          TopLeft="189,80" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\SQL Server to PostgreSQL">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="136,42"
+          Id="Package\SQL Server to PostgreSQL\SQL Server"
+          TopLeft="59,68" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\SQL Server to PostgreSQL\PostgreSQL"
+          TopLeft="281,144" />
+        <EdgeLayout
+          Id="Package\SQL Server to PostgreSQL.Paths[ODBC Source Output]"
+          TopLeft="127,110">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="223.5,34"
+              Start="0,0"
+              End="223.5,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="219.5,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="219.5,17"
+                    Point2="223.5,17"
+                    Point3="223.5,21" />
+                  <mssgle:LineSegment
+                    End="223.5,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SQL Server to PostgreSQL\PostgreSQL">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\SQL Server to PostgreSQL\SQL Server">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
